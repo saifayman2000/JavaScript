@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Learn JavaScript</title>
+        <script>
+            // Code One
+            document.getElementById("el").style.color = "red";
+            /*
+                this code is not working 
+                bec. the eletment <script> in head thin the code don't located bec. the code in body and element <script> in head 
+            */
+        </script>
+        <script>
+            // Code Two
+            window.onload = function () {
+                document.getElementById("el").style.color = "red";
+            };
+            /*
+                    this code is working
+                    bec. window element makes page in loading laod any element in html file like h1 get this function   
+            */
+        </script>
+    </head>
+    <body>
+        <h1 id="el">Page Title</h1>
+        <script>
+            // Code Three
+            document.getElementById("el").style.color = "red";
+            /* 
+                this cod is working
+                bec, the <script> element is in body not in head
+            */
+        </script>
+    </body>
+</html>
